@@ -1,0 +1,28 @@
+<div class="bg-primary mx-2 rounded-1 mt-1">
+    <div class="d-flex justify-content-center align-items-center mx-2 fw-bold">
+      <div class="col mt-2"><i class="fa-solid fa-user-nurse me-2"></i>{{session.level}}</div>
+      <div class="col mt-2 text-end">{{session.id}}</div>
+    </div>
+    <div class="mx-2 fw-bold mt-2 text-capitalize">{{session.user}}</div>
+</div>
+
+    <div class="tugas mb-5 pb-5" id="file-tugas">
+      
+        <div class="container my-2">
+            <div class="row border d-flex align-items-center py-2 shadow mx-1">
+                <div class="col-2">
+                    <img src="static/image/logo-tugas.jpg" class="rounded-1" alt="Gambar Kecil" width="55">
+                </div>
+                <div class="col">
+                    <span class="d-block fs-5">minggu1</span>
+                    <span class="d-block" style="font-size: 0.7rem;">siap dikumpulkan</span>
+                </div>
+                <div class="col text-end">
+                    <form>
+                        <button type="submit" value="${file.fileName}" class="btn btn-success download-tugas">Kerjakan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ data }}

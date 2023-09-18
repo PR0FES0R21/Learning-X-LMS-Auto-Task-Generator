@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Insert kuis</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <form action="/add/kuis" method="post">
+        <div class="mb-3">
+          <label for="soal-kuis" class="form-label">Soal Kuis</label>
+          <textarea name="soal-kuis" type="text" class="form-control" id="soal-kuis"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="jawaban-kuis" class="form-label">Jawaban</label>
+          <textarea type="text" name="jawaban-kuis" class="form-control" id="jawaban-kuis"></textarea>
+        </div>
+        <input type="hidden" name="nomor-kuis" value="{{data}}">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-warning" onclick="window.location.href = '/add_file'">Upload File</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href = '/'">Kembali</button>
+    </form>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

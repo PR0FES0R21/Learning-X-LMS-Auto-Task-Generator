@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Tambah Tugas</title>
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#0085ff">
+  <link rel="icon" href="{{url_for('static', filename='image/logo_joki.png')}}" type="jpg">
+
+  <meta name="description" content="AItech Capital: Mendorong inovasi AI melalui investasi. Bergabunglah dengan kami untuk membentuk masa depan teknologi yang didukung oleh kecerdasan buatan." />
+  <meta name="keywords" content="AI, teknologi, investasi, kecerdasan buatan, inovasi, masa depan" />
+  <meta name="author" content="AItech Capital" />
+
+  <meta property="og:title" content="AItech Capital: Mendorong Inovasi AI Melalui Investasi" />
+  <meta property="og:description" content="Bergabunglah dengan AItech Capital untuk membentuk masa depan teknologi yang didukung oleh kecerdasan buatan. Kami mendukung pengembangan chip AI dan solusi AI siap pakai." />
+  <meta property="og:image" content="URL_GAMBAR_LOGO" />
+  <meta property="og:url" content="URL_HALAMAN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AItech Capital" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+          <img src="{{ url_for('static', filename='image/logo_joki.png') }}" alt="Logo">
+          Nabil Joki
+        </a>
+        <div class="d-flex">
+          <a href="/tambahUser" class="cs-icon me-3"><i class="fa-solid fa-user-plus fa-2x"></i></a>
+          <a href="/add_file" class="cs-icon"><i class="fa-solid fa-file-arrow-up fa-2x"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="form mt-2 border shadow mx-2">
+      <form action="/save_file" method="post" enctype="multipart/form-data" class="mx-1 my-2">
+        <div class="mb-3">
+            <label for="nama-tugas" class="form-label">Nama Tugas</label>
+            <input type="text" class="form-control" id="nama-tugas" name="nama-tugas" aria-describedby="nama-tugas">
+            <div id="nama-tugas" class="form-text">Silahkan Masukan Nama File Tugas.</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="keterangan" class="form-label">Keterangan</label>
+            <input type="text" class="form-control" id="keterangan" name="keterangan" aria-describedby="keterangan">
+        </div>
+
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Masukan File Tugas</label>
+          <input class="form-control" type="file" name="file-tugas" id="formFile">
+        </div>
+    
+        <div class="d-flex justify-content-end mb-3 me-3">
+            <button type="submit" name="submit" class="btn btn-success">Kirim</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d491125819.js" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+
+</html>

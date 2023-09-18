@@ -1,0 +1,52 @@
+<div class="wrap">
+    <div class="user-info">
+        <div class="d-flex align-items-center pt-4 ms-3">
+            <div class="col-2">
+                <img class="small-image rounded-circle" src="{{url_for('static', filename='image/profile/')}}{{session.profile}}" alt="icon profile">
+            </div>
+            <div class="col-10">
+                <div class="d-flex flex-column align-items-start">
+                    <span class="fw-bold fs-5">{{session.user}}</span>
+                    <span class="person-name fs-6">ID: {{session.id}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-outline-light rounded-5 ms-3 my-3 fs-6"><i class="fa-solid fa-gears"></i><span class="mx-3">{{session.level}}</span><i class="fa-solid fa-angles-right"></i></div>
+    </div>
+    <div class="menu bg-white mx-2 my-4 rounded-1">
+        <div class="d-flex text-center py-3 text-secondary">
+            <div class="col pointer" onclick="window.location.href = '/daftar/tugas'">
+                <div class="kerjakan-tugas text-primary"><i class="fa-solid fa-book fa-2x"></i></div>
+                <div class="kerjakan-tugas">Kerjakan Tugas</div>
+            </div>
+            <div class="col pointer" onclick="window.location.href = '/edit/profile'">
+                <div class="tambah-user text-danger"><i class="fa-solid fa-user-pen fa-2x"></i></div>
+                <div class="tambah-user">Edit Profile</div>
+            </div>
+            <div class="col" onclick="window.location.href = '/confirmasi/tugas'">
+                <i class="fa-solid fa-calendar-check fa-2x text-info"></i>
+                <div class="konfirmasi-tugas">Konfirmasi Tugas</div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="bg-light my-3 mx-2 rounded-1">
+        <div class="text-dark py-2 pointer">  
+                <div class="end border-top">
+                    <div class="menu mx-2 d-flex align-items-center py-2 fs-3">
+                        <div class="col">
+                            <i class="fa-solid fa-file-pdf text-warning"></i>
+                            <span class="mx-2 fs-6">Minggu 4</span>
+                        </div>
+                        <div class="col text-end"><i class="fa-solid fa-circle-down"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary mx-2 rounded-1 py-2 text-center" onclick="window.location.href = '/logout'">
+            <span>Keluar</span>
+        </div>
+    </div>
+</div>

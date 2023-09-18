@@ -1,0 +1,136 @@
+:root{
+    --primary-100:#0085ff;
+    --primary-200:#69b4ff;
+    --primary-300:#e0ffff;
+    --accent-100:#006fff;
+    --accent-200:#e1ffff;
+    --text-100:#FFFFFF;
+    --text-200:#9e9e9e;
+    --bg-100:#1E1E1E;
+    --bg-200:#2d2d2d;
+    --bg-300:#454545;
+      
+}
+
+body {
+    max-width: 576px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-100);
+    background-color: rgb(213, 212, 212);
+    user-select: none;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.small-image {
+    width: 50px;
+    height: 50px;
+}
+
+.wrap {
+    background: linear-gradient(var(--primary-100) 25%, rgb(237, 237, 237)25%);
+    height: 100vh;
+}
+/* style for navbar */
+.navbar {
+    background-color: var(--accent-100);
+    box-shadow: #1E1E1E;
+}
+
+.navbar-cs > a {
+    color: #FFFFFF;
+}
+/* end style navbar */
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+}
+
+.cs-icon {
+    color: var(--primary-200);
+}
+
+.bg-primary-200 {
+    background-color: var(--primary-200);
+}
+
+.bg-primary-100 {
+    background-color: var(--primary-100);
+}
+
+.primary-300 {
+    color: var(--primary-300);
+}
+
+.custom-input:focus {
+    box-shadow: none; 
+    border-color: transparent;
+}
+
+/* style for input file custom */
+/* Sembunyikan border dan tampilkan hanya tombol */
+.custom-file-input {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    opacity: 0;
+  }
+
+  .custom-file-label {
+    cursor: pointer;
+  }
+
+  /* Gaya untuk tombol */
+/* CSS custom sesuai kebutuhan Anda */
+.custom-file-input {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    opacity: 0;
+  }
+
+  .custom-file-label {
+    cursor: pointer;
+  }
+
+  .custom-file-button::before {
+    content: 'upload profile';
+    display: inline-block;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 20px;
+    outline: none;
+    white-space: nowrap;
+    --webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    color: #fff;
+  }
+
+  .custom-file-button:hover::before {
+    border-color: #ff416c;
+  }
+
+  .custom-file-button:active::before {
+    background: -webkit-linear-gradient(top, #ff4b2b, #ff416c);
+  }

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+  {% block header %}{% endblock %}
+    
+    {% if session.level == 'administrator' %}
+        {% include 'templates/admin/index.html' %}
+    {% endif %}
+
+
+
+    {% block script %} {% endblock %}
+</body>
