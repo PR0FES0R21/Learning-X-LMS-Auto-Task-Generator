@@ -68,5 +68,3 @@ lms-automation/
    ```
 
 ---
-
-Made with ❤️ using Flask & MongoDB.
